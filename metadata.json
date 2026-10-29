@@ -1,0 +1,7 @@
+{
+  "name": "Banshhata Foundation - Official App",
+  "description": "Official production-ready Android application and interactive simulator for Banshhata Foundation, powered by the official Blogger dynamic content layer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

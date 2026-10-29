@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/splashRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_background"
+    android:padding="24dp">
+
+    <!-- Container for centered branding -->
+    <LinearLayout
+        android:id="@+id/brandingContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <!-- Logo Container with Circular Glow Aura -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Soft circular glow aura using official emerald color -->
+            <View
+                android:id="@+id/logoGlowRing"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:alpha="0"
+                android:background="@drawable/bg_splash_glow"
+                android:scaleX="0.6"
+                android:scaleY="0.6" />
+
+            <!-- Official SVG Logo (Unchanged Artwork & Proportions) -->
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:alpha="0"
+                android:contentDescription="@string/app_name"
+                android:scaleX="0.75"
+                android:scaleY="0.75"
+                android:src="@drawable/ic_foundation_logo" />
+
+        </FrameLayout>
+
+        <!-- Foundation Title (English) -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:text="@string/app_name"
+            android:textColor="@color/brand_primary_dark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationY="20dp" />
+
+        <!-- Foundation Title (Bengali) -->
+        <TextView
+            android:id="@+id/tvTitleBn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:alpha="0"
+            android:text="@string/foundation_name_bn"
+            android:textColor="@color/brand_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationY="15dp" />
+
+        <!-- Official Slogan with Ruby Red Accent -->
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="0"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:text="@string/foundation_slogan"
+            android:textColor="@color/brand_accent_red"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:translationY="15dp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Subtle Loading Progress Indicator -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/splashProgress"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:alpha="0"
+        android:indeterminate="true"
+        app:indicatorColor="@color/brand_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:trackColor="@color/brand_progress_track" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

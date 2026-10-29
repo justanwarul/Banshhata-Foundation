@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCoordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brand_surface">
+
+    <!-- Thin Linear Progress Indicator at the very top (visible only during loading) -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pageLoadingBar"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_gravity="top"
+        android:elevation="8dp"
+        android:visibility="gone"
+        app:indicatorColor="@color/brand_accent_red"
+        app:trackColor="@color/brand_primary_dark" />
+
+    <!-- Pure Fullscreen Dynamic Website Container -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Official Banshhata Foundation Blogger Content Layer -->
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Professional Offline Screen Fallback -->
+    <include
+        android:id="@+id/offlineLayout"
+        layout="@layout/layout_offline"
+        android:visibility="gone" />
+
+    <!-- THE ONLY APP-CREATED MAIN UI ELEMENT:
+         Exactly one floating Contact button pinned elegantly to the LEFT side of the screen.
+         Does not conflict with the website's own scroll-to-top button on the right. -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFloatingContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="যোগাযোগ করুন (Contact Foundation)"
+        android:src="@drawable/ic_contact_message"
+        app:backgroundTint="@color/brand_primary"
+        app:borderWidth="0dp"
+        app:elevation="4dp"
+        app:fabSize="normal"
+        app:hoveredFocusedTranslationZ="6dp"
+        app:pressedTranslationZ="8dp"
+        app:rippleColor="@color/brand_primary_light"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

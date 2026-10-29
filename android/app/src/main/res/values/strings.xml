@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Foundation Identity -->
+    <string name="app_name">Banshhata Foundation</string>
+    <string name="foundation_name_bn">বাঁশহাটা ফাউন্ডেশন</string>
+    <string name="foundation_slogan">মানবতার হাত বাড়াই, অসহায়ের পাশে দাঁড়াই</string>
+
+    <!-- Communication & Contact -->
+    <string name="action_contact">যোগাযোগ করুন</string>
+    <string name="action_call">কল করুন</string>
+    <string name="action_messenger">মেসেঞ্জার</string>
+    <string name="action_facebook">ফেসবুক পেজ</string>
+    <string name="action_email">ইমেইল</string>
+    <string name="action_whatsapp">হোয়াটসঅ্যাপ</string>
+    <string name="action_share">শেয়ার</string>
+
+    <!-- Offline State -->
+    <string name="offline_title">ইন্টারনেট সংযোগ নেই</string>
+    <string name="offline_message">অনুগ্রহ করে আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।</string>
+    <string name="offline_retry">পুনরায় চেষ্টা করুন</string>
+    <string name="offline_view_cached">সংরক্ষিত পৃষ্ঠা দেখুন</string>
+
+    <!-- Share Intent Text -->
+    <string name="share_title">Banshhata Foundation শেয়ার করুন</string>
+    <string name="share_text">Banshhata Foundation\n\"মানবতার হাত বাড়াই, অসহায়ের পাশে দাঁড়াই\"\n\nঅফিসিয়াল ওয়েবসাইট দেখুন:\nhttps://BanshhataFoundation.blogspot.com/</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_press_back_again">অ্যাপ বন্ধ করতে আবার ব্যাক চাপুন</string>
+</resources>
